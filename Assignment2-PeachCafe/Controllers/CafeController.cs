@@ -17,13 +17,33 @@ namespace Assignment2_PeachCafe.Controllers
         // GET: Cafe
         public ActionResult Index()
         {
-            return View(db.MenuCourses.ToList());
+            List<MenuCourse> menucourses = new List<MenuCourse>
+            {
+                new MenuCourse("Appetizer"),
+            new MenuCourse("Main"),
+            new MenuCourse("Beverage"),
+            new MenuCourse("Sweet")
+        };
+            return View(menucourses);
+        }
+
+        //GET: Cafe/Browse?menucourse=appetizer
+        public ActionResult Browse(string menucourse)
+        {
+            if(menucourse == null)
+            {
+                menucourse = "Appetizer";
+            }
+
+            MenuCourse menuCourseModel = new MenuCourse(menucourse);
+            return View(menuCourseModel);
         }
 
         // GET: Cafe/Details/5
         public ActionResult Details(int? id= 1)
         {
-            return View();
+            FoodItem fooditem = new FoodItem("FoodItem" + id);
+            return View(fooditem);
         }
 
         

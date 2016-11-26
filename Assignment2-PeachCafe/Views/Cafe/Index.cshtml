@@ -1,0 +1,17 @@
+﻿@using Assignment2_PeachCafe.Models
+@model IEnumerable<MenuCourse>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>View Menu</h2>
+<p>
+    
+</p>
+
+<ul>
+    @foreach (MenuCourse item in Model)
+    {
+        <li>@Html.ActionLink(item.Name, "Browse", new { menucourse = item.Name })</li>
+    }
+</ul>

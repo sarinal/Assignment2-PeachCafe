@@ -9,6 +9,15 @@ namespace Assignment2_PeachCafe.Models
     [Table("FoodItem")]
     public partial class FoodItem
     {
+        /// <summary>
+        /// Constructor takes one argument name which sets the name propert to its value
+        /// </summary>
+        /// <param name="name"></param>
+        public FoodItem(string name)
+        {
+            this.Name = name;
+        }
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int FoodItemId { get; set; }
 

@@ -15,6 +15,14 @@ namespace Assignment2_PeachCafe.Models
             FoodItems = new HashSet<FoodItem>();
         }
 
+        /// <summary>
+        /// Constructor takes one argument type string and assigns value to Name property
+        /// </summary>
+        /// <param name="name"></param>
+        public MenuCourse(string name)
+        {
+            this.Name = name;
+        }
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MenuCourseId { get; set; }
 
