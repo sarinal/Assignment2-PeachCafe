@@ -6,21 +6,27 @@ namespace Assignment2_PeachCafe.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Main")]
-    public partial class Main
+    [Table("FoodItem")]
+    public partial class FoodItem
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MainId { get; set; }
+        public int FoodItemId { get; set; }
+
+        public int MenuCourseId { get; set; }
 
         [Required]
         [StringLength(50)]
         public string Name { get; set; }
 
-        [Required]
         [StringLength(160)]
         public string Description { get; set; }
 
         [Column(TypeName = "numeric")]
         public decimal Price { get; set; }
+
+        [StringLength(1024)]
+        public string ImageUrl { get; set; }
+
+        public virtual MenuCourse MenuCourse { get; set; }
     }
 }

@@ -8,56 +8,31 @@ namespace Assignment2_PeachCafe.Models
     public partial class PeachCafeContext : DbContext
     {
         public PeachCafeContext()
-            : base("name=PeachCafeConnection")
+            : base("name=PeachCafeConnect")
         {
         }
 
-        public virtual DbSet<Appetizer> Appetizers { get; set; }
-        public virtual DbSet<Beverage> Beverages { get; set; }
-        public virtual DbSet<Main> Mains { get; set; }
-        public virtual DbSet<Sweet> Sweets { get; set; }
+        public virtual DbSet<FoodItem> FoodItems { get; set; }
+        public virtual DbSet<MenuCourse> MenuCourses { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Appetizer>()
+            modelBuilder.Entity<FoodItem>()
                 .Property(e => e.Price)
                 .HasPrecision(10, 2);
 
-            modelBuilder.Entity<Beverage>()
+            modelBuilder.Entity<FoodItem>()
+                .Property(e => e.ImageUrl)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<MenuCourse>()
                 .Property(e => e.Name)
-                .IsFixedLength();
+                .IsUnicode(false);
 
-            modelBuilder.Entity<Beverage>()
-                .Property(e => e.Description)
-                .IsFixedLength();
-
-            modelBuilder.Entity<Beverage>()
-                .Property(e => e.Price)
-                .HasPrecision(10, 2);
-
-            modelBuilder.Entity<Main>()
-                .Property(e => e.Name)
-                .IsFixedLength();
-
-            modelBuilder.Entity<Main>()
-                .Property(e => e.Description)
-                .IsFixedLength();
-
-            modelBuilder.Entity<Main>()
-                .Property(e => e.Price)
-                .HasPrecision(10, 2);
-
-            modelBuilder.Entity<Sweet>()
-                .Property(e => e.Name)
-                .IsFixedLength();
-
-            modelBuilder.Entity<Sweet>()
-                .Property(e => e.Description)
-                .IsFixedLength();
-
-            modelBuilder.Entity<Sweet>()
-                .Property(e => e.Price)
-                .HasPrecision(10, 2);
+            modelBuilder.Entity<MenuCourse>()
+                .HasMany(e => e.FoodItems)
+                .WithRequired(e => e.MenuCourse)
+                .WillCascadeOnDelete(false);
         }
     }
 }

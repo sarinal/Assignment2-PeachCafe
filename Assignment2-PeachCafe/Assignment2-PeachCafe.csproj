@@ -171,23 +171,18 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AppetizersController.cs" />
-    <Compile Include="Controllers\BeveragesController.cs" />
+    <Compile Include="Controllers\CafeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MainsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\SweetsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Appetizer.cs" />
-    <Compile Include="Models\Beverage.cs" />
+    <Compile Include="Models\FoodItem.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Main.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MenuCourse.cs" />
     <Compile Include="Models\PeachCafeContext.cs" />
-    <Compile Include="Models\Sweet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -270,10 +265,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Appetizers\" />
-    <Folder Include="Views\Beverages\" />
-    <Folder Include="Views\Mains\" />
-    <Folder Include="Views\Sweets\" />
+    <Folder Include="Views\Cafe\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
