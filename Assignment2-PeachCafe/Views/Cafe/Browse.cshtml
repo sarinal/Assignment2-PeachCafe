@@ -23,7 +23,9 @@
     {
         <tr>
 
-            <td></td>
+            <td>
+                <img id="thumbnail" src=@fooditem.ImageUrl style="height: 100px; width: 100px;" />
+            </td>
             <td>
                @Html.ActionLink(@fooditem.Name, "Details", new { id = fooditem.FoodItemId })
             </td>
