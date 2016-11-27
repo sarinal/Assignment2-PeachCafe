@@ -8,34 +8,35 @@
 <h2>@Model.Name</h2>
 <table class="table">
     <tr>
-        <th>
+        <td>
 
-        </th>
-        <th>
+        </td>
+        <td>
             <h4>Name</h4>
-        </th>
-        <th>
+        </td>
+        <td>
             <h4>Description</h4>
-        </th>
-        <th>
+        </td>
+        <td>
             <h4>Price</h4>
-        </th>
+        </td>
     </tr>
         @foreach (var fooditem in Model.FoodItems)
         {
             <tr>
-                <th>
+                
+                <td>
                     
-                </th>
-                <th>
+                </td>
+                <td>
                     @fooditem.Name
-                </th>
-                <th>
+                </td>
+                <td>
                     @fooditem.Description
-                </th>
-                <th>
+                </td>
+                <td>
                     @fooditem.Price
-                </th>
+                </td>
             </tr>
         }
     
