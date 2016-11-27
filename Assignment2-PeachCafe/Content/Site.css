@@ -7,10 +7,6 @@ body {
     margin-right: auto;
 }
 
-ul {
-    list-style: none;
-    font-size: 30px;
-}
 #navigation{
     background-color: #eeaf00;
 }
@@ -52,40 +48,14 @@ textarea {
     max-width: 280px;
 }
 
-
 tr {
     border: 1px solid #000;
-    line-height: 100px;
+    line-height: 25px;
     
 }
 
-th, td {
-    height: 100px;
-    font-size: 20px;
+th {
+    font-size: 16px;
     text-align: left;
 }
-
-/*Home Page*/
-.jumbotron img {
-    width: 100%;
-    height: 100%;
-}
-/*Cafe Page*/
-#menu {
-    text-align: center;
-}
-/*CONTACT PAGE CSS*/
-#contact {
-    font-size: 40px;
-}
-#contact img{
-    height: 260px;
-    width: 360px;
-    
-}
-
-.socialicons{
-    font-size: 100px;
-}
-
 

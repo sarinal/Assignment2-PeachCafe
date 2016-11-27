@@ -4,17 +4,15 @@
     ViewBag.Title = "Index";
 }
 
-<h1>View Menu</h1>
-<div id="menu" class="container">
-    <p>
-        <ul>
-            @foreach (MenuCourse item in Model)
-            {
-                <li>@Html.ActionLink(item.Name, "Browse", new { menucourse = item.Name })</li>
-            }
-        </ul>
-
-    </p>
-</div>
+<h2>View Menu</h2>
+<p>
+    <ul>
+    @foreach (MenuCourse item in Model)
+    {
+        <li>@Html.ActionLink(item.Name, "Browse", new { menucourse = item.Name })</li>
+    }
+</ul>
+    
+</p>
 
 
