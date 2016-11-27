@@ -32,7 +32,7 @@ namespace Assignment2_PeachCafe.Controllers
         {
             if(menucourse == null)
             {
-                menucourse = "Appetizer";
+                menucourse = "appetizer";
             }
 
             MenuCourse menuCourseModel = db.MenuCourses.Include("FoodItems").SingleOrDefault(g => g.Name == menucourse);
@@ -42,7 +42,12 @@ namespace Assignment2_PeachCafe.Controllers
         // GET: Cafe/Details/5
         public ActionResult Details(int? id = 1)
         {
-            FoodItem fooditem = new FoodItem("FoodItem" + id);
+            
+            FoodItem fooditem = db.FoodItems.Find(id);
+            if (fooditem == null)
+            {
+                return HttpNotFound();
+            }
             return View(fooditem);
         }
 

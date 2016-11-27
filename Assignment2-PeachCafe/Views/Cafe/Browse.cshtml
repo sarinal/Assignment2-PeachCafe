@@ -8,36 +8,33 @@
 <h2>@Model.Name</h2>
 <table class="table">
     <tr>
-        <th>
-
-        </th>
-        <th>
+        <td></td>
+        <td>
             <h4>Name</h4>
-        </th>
-        <th>
+        </td>
+        <td>
             <h4>Description</h4>
-        </th>
-        <th>
+        </td>
+        <td>
             <h4>Price</h4>
-        </th>
+        </td>
     </tr>
-        @foreach (var fooditem in Model.FoodItems)
-        {
-            <tr>
-                <th>
-                    
-                </th>
-                <th>
-                    @fooditem.Name
-                </th>
-                <th>
-                    @fooditem.Description
-                </th>
-                <th>
-                    @fooditem.Price
-                </th>
-            </tr>
-        }
-    
+    @foreach (var fooditem in Model.FoodItems)
+    {
+        <tr>
+
+            <td></td>
+            <td>
+               @Html.ActionLink(@fooditem.Name, "Details", new { id = fooditem.FoodItemId })
+            </td>
+            <td>
+                @fooditem.Description
+            </td>
+            <td>
+                @fooditem.Price
+            </td>
+        </tr>
+    }
+
 </table>
 <p>@Html.ActionLink("Back to Menu", "Index")</p>
