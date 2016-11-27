@@ -7,6 +7,13 @@ body {
     margin-right: auto;
 }
 
+h2 {
+    font-family: 'Pacifico', cursive;
+}
+.container{
+    width: 80%
+}
+
 ul {
     list-style: none;
     font-size: 30px;
@@ -40,10 +47,16 @@ ul {
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
-.dl-horizontal dt {
-    white-space: normal;
+.dl-horizontal dt {   
+    width: 180px;
+    margin-left: 100px;
+    float: left;
 }
 
+.dl-horizontal dd {
+    width: 300px;
+    float: left;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -70,10 +83,36 @@ th, td {
 #details {
     font-size: 30px;
 }
+
+
 /*Cafe Page*/
 #menu {
     text-align: center;
 }
+
+#menu ul{
+    font-family: 'Pacifico', cursive;   
+}
+
+#menu li{
+    padding-top: 20px;
+    font-size: 60px;
+    color: black;
+}
+
+#menu li a {
+    color: #000;
+}
+
+#menu li a:hover {
+    color: #eeaf00;
+    
+}
+
+#menu li a:visited {
+    color: #f6bc84;
+}
+
 
 #thumbnail img {
     width: 100px;
@@ -82,16 +121,23 @@ th, td {
 }
 /*CONTACT PAGE CSS*/
 #contact {
-    font-size: 40px;
-}
-#contact img{
-    height: 260px;
-    width: 360px;
-    
+    font-size: 30px;
 }
 
-.socialicons{
+#contact p{
+    text-align: center;
+}
+
+#contact h3{
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+
+#socialicons{
     font-size: 100px;
+    text-align: center;
+    color: #eeaf00;
 }
 
 
