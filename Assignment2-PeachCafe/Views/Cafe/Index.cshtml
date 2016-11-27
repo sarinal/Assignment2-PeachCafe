@@ -6,12 +6,13 @@
 
 <h2>View Menu</h2>
 <p>
-    
-</p>
-
-<ul>
+    <ul>
     @foreach (MenuCourse item in Model)
     {
         <li>@Html.ActionLink(item.Name, "Browse", new { menucourse = item.Name })</li>
     }
 </ul>
+    
+</p>
+
+

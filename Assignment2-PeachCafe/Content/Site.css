@@ -47,3 +47,15 @@ select,
 textarea {
     max-width: 280px;
 }
+
+tr {
+    border: 1px solid #000;
+    line-height: 25px;
+    
+}
+
+th {
+    font-size: 16px;
+    text-align: left;
+}
+

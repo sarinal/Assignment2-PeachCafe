@@ -15,6 +15,12 @@ namespace Assignment2_PeachCafe.Models
         public virtual DbSet<FoodItem> FoodItems { get; set; }
         public virtual DbSet<MenuCourse> MenuCourses { get; set; }
 
+        public class ViewMenuModel
+        {
+            public virtual DbSet<FoodItem> FoodItems { get; set; }
+            public virtual DbSet<MenuCourse> MenuCourses { get; set; }
+
+        }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<FoodItem>()

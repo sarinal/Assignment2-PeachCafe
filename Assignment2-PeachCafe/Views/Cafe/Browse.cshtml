@@ -6,4 +6,38 @@
 }
 
 <h2>@Model.Name</h2>
+<table class="table">
+    <tr>
+        <th>
 
+        </th>
+        <th>
+            <h4>Name</h4>
+        </th>
+        <th>
+            <h4>Description</h4>
+        </th>
+        <th>
+            <h4>Price</h4>
+        </th>
+    </tr>
+        @foreach (var fooditem in Model.FoodItems)
+        {
+            <tr>
+                <th>
+                    
+                </th>
+                <th>
+                    @fooditem.Name
+                </th>
+                <th>
+                    @fooditem.Description
+                </th>
+                <th>
+                    @fooditem.Price
+                </th>
+            </tr>
+        }
+    
+</table>
+<p>@Html.ActionLink("Back to Menu", "Index")</p>

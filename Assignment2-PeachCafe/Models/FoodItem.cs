@@ -9,6 +9,10 @@ namespace Assignment2_PeachCafe.Models
     [Table("FoodItem")]
     public partial class FoodItem
     {
+        public FoodItem()
+        {
+
+        }
         /// <summary>
         /// Constructor takes one argument name which sets the name propert to its value
         /// </summary>
@@ -21,7 +25,8 @@ namespace Assignment2_PeachCafe.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int FoodItemId { get; set; }
 
-        public int MenuCourseId { get; set; }
+        public virtual int MenuCourseId { get; set; }
+        public virtual MenuCourse MenuCourse { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -36,6 +41,6 @@ namespace Assignment2_PeachCafe.Models
         [StringLength(1024)]
         public string ImageUrl { get; set; }
 
-        public virtual MenuCourse MenuCourse { get; set; }
+        
     }
 }
