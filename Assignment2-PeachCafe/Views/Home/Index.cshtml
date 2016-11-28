@@ -2,11 +2,26 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <img id="jumbotron" src="~/Assets/images/home2.jpg" style="height: 800px; 
-    width:100%; 
-    margin-right:auto;
-    margin-left:auto;
-    align-content:center;"/>
+<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.10.2.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")"></script>
+@Styles.Render("~/Content/css")
+
+<div id="slideShowImage">
+    <div><img src="~/Assets/images/home2.jpg" style="height:780px; width:100%;"/></div>
+    <div><img src="~/Assets/images/home1.jpg" style="height:780px; width:100%;"/></div>
+    <div><img src="~/Assets/images/home3.jpg" style="height:780px; width:100%;" /></div>
+    
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $("#slideshow > div:gt(0)").hide();
+        setInterval(function()
+        {
+            $('#slideShowImage > div:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('#slideShowImage');
+        }, 3000);
+    });
+</script>
+
 

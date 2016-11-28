@@ -81,7 +81,21 @@ th, td {
 }
 
 /*Home Page*/
-
+ #slideShowImage {  
+        margin: 50px auto;  
+        position: relative;  
+        width: 100%;  
+        height: 820px;  
+        padding: 10px;  
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);  
+    }  
+     #slideShowImage > div {  
+        position: absolute;  
+        top: 10px;  
+        left: 10px;  
+        right: 10px;  
+        bottom: 10px;  
+    }  
 /*Details Page*/
 #details {
     font-size: 30px;
