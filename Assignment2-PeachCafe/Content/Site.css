@@ -31,14 +31,15 @@ ul {
 }
 
 .navbar-header{
-    height: 150px;
+    height: 190px;
 }
 
 #navlinks{
     font-family: 'Pacifico', cursive;
-    padding-top: 50px;
+    padding-left: 30px;
+    padding-top: 65px;
     font-size: 30px;
-    height: 150px;
+    height: 160px;
 }
 
 
