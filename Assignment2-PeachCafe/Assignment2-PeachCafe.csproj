@@ -218,6 +218,7 @@
     <Content Include="Assets\images\img404.jpg" />
     <Content Include="Assets\images\img405.jpg" />
     <Content Include="Assets\images\img406.jpg" />
+    <Content Include="Assets\images\map.png" />
     <Content Include="Assets\images\peachLogo.png" />
     <Content Include="Assets\images\placeholder.gif" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -245,6 +246,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="Scripts\bootstrap.js" />
+    <None Include="Properties\PublishProfiles\peachcafe.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
